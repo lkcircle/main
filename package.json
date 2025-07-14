@@ -1,0 +1,43 @@
+{
+  "name": "lkcircle-landing",
+  "version": "1.0.0",
+  "description": "Coming soon landing page for LKCircle - Connecting Sri Lankan communities in UK & Europe",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'No build step required for static HTML'",
+    "preview": "npx serve .",
+    "deploy": "vercel --prod",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "lint": "eslint . --ext .js,.html",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "landing-page",
+    "sri-lanka",
+    "community",
+    "uk",
+    "europe",
+    "lkcircle"
+  ],
+  "author": "LKCircle Team",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
+    "serve": "^14.2.1"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/lkcircle-landing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/lkcircle-landing/issues"
+  },
+  "homepage": "https://lkcircle.com"
+}
