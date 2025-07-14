@@ -164,7 +164,7 @@
             margin: 0 auto;
             padding: 16px 24px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
 
@@ -186,47 +186,36 @@
             justify-content: center;
         }
 
-        .logo-icon svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--text-primary);
-        }
-
         /* Hero Section */
         .hero {
             padding: 140px 24px 80px;
             background: var(--bg-secondary);
-            min-height: 90vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
+            justify-content: center;
             position: relative;
             overflow: hidden;
         }
 
         .hero-bg-pattern {
             position: absolute;
-            top: 0;
+            top: -100px;
             right: -200px;
             width: 600px;
             height: 600px;
             background: radial-gradient(circle, rgba(233, 12, 53, 0.05) 0%, transparent 70%);
             animation: float-slow 20s ease-in-out infinite;
+        }
+
+        .hero-bg-pattern-2 {
+            position: absolute;
+            bottom: -150px;
+            left: -200px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(233, 12, 53, 0.03) 0%, transparent 70%);
+            animation: float-slow 25s ease-in-out infinite reverse;
         }
 
         @keyframes float-slow {
@@ -235,18 +224,15 @@
         }
 
         .hero-container {
-            max-width: 1280px;
+            max-width: 800px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
+            text-align: center;
             position: relative;
             z-index: 1;
         }
 
         .hero-content {
-            animation: fadeInLeft 0.8s ease-out;
+            animation: fadeInUp 0.8s ease-out;
         }
 
         .hero-badge {
@@ -276,7 +262,7 @@
         }
 
         h1 {
-            font-size: clamp(36px, 5vw, 56px);
+            font-size: clamp(42px, 6vw, 64px);
             font-weight: 800;
             line-height: 1.1;
             margin-bottom: 24px;
@@ -284,15 +270,18 @@
         }
 
         .hero-subtitle {
-            font-size: 20px;
+            font-size: 22px;
             color: var(--text-secondary);
-            margin-bottom: 40px;
+            margin-bottom: 48px;
             line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Countdown Timer */
         .countdown-section {
-            margin-bottom: 48px;
+            margin-bottom: 56px;
             animation: fadeInUp 0.8s ease-out 0.2s both;
         }
 
@@ -302,12 +291,13 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--text-secondary);
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .countdown {
             display: flex;
-            gap: 16px;
+            gap: 20px;
+            justify-content: center;
         }
 
         .countdown-item {
@@ -391,6 +381,7 @@
             display: flex;
             gap: 12px;
             max-width: 480px;
+            margin: 0 auto 48px;
             animation: fadeInUp 0.8s ease-out 0.4s both;
         }
 
@@ -410,68 +401,14 @@
             box-shadow: 0 0 0 3px rgba(233, 12, 53, 0.1);
         }
 
-        /* Hero Visual */
-        .hero-visual {
-            position: relative;
-            animation: fadeInRight 0.8s ease-out 0.2s both;
-        }
-
-        .phone-mockup {
-            width: 100%;
-            max-width: 400px;
-            height: 600px;
-            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-            border-radius: 40px;
-            padding: 12px;
-            box-shadow: var(--shadow-xl);
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .phone-screen {
-            width: 100%;
-            height: 100%;
-            background: white;
-            border-radius: 28px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .app-preview {
-            text-align: center;
-            padding: 40px;
-        }
-
-        .preview-logo {
-            width: 80px;
-            height: 80px;
-            background: var(--primary);
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 32px;
-            font-weight: 800;
-        }
-
-        .preview-text {
-            font-size: 18px;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-        }
-
         /* Features */
         .features-strip {
             display: flex;
             gap: 40px;
-            margin-top: 60px;
+            justify-content: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
             animation: fadeInUp 0.8s ease-out 0.6s both;
         }
 
@@ -530,28 +467,6 @@
         }
 
         /* Animations */
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -563,57 +478,15 @@
             }
         }
 
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            flex-direction: column;
-            gap: 4px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 4px;
-        }
-
-        .mobile-menu-btn span {
-            width: 24px;
-            height: 2px;
-            background: var(--text-primary);
-            transition: all 0.3s ease;
-        }
-
         /* Responsive */
-        @media (max-width: 1024px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 60px;
-            }
-
-            .hero-visual {
-                order: -1;
-            }
-
-            .phone-mockup {
-                max-width: 300px;
-                height: 450px;
-            }
-        }
-
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: flex;
-            }
-
             .hero {
                 padding: 100px 20px 60px;
                 min-height: auto;
             }
 
             h1 {
-                font-size: 32px;
+                font-size: 36px;
             }
 
             .hero-subtitle {
@@ -628,10 +501,6 @@
 
             .countdown-item {
                 min-width: auto;
-            }
-
-            .cta-section {
-                flex-direction: column;
             }
 
             .email-form {
@@ -665,40 +534,17 @@
         <div class="nav-container">
             <a href="#" class="logo">
                 <div class="logo-icon">
-                    <!-- Logo representation for preview -->
-                    <div style="width: 100%; height: 100%; position: relative;">
-                        <!-- Red figure -->
-                        <div style="position: absolute; width: 30%; height: 30%; background: #E90C35; border-radius: 50%; top: 35%; left: 10%;"></div>
-                        <div style="position: absolute; width: 25%; height: 40%; background: #E90C35; border-radius: 40% 60% 60% 40%; top: 15%; left: 20%; transform: rotate(-20deg);"></div>
-                        
-                        <!-- Dark blue figure -->
-                        <div style="position: absolute; width: 30%; height: 30%; background: #3B4856; border-radius: 50%; top: 10%; right: 25%;"></div>
-                        <div style="position: absolute; width: 20%; height: 35%; background: #3B4856; border-radius: 50%; top: 35%; right: 30%;"></div>
-                        
-                        <!-- Light gray figure -->
-                        <div style="position: absolute; width: 25%; height: 25%; background: #C0C0C0; border-radius: 50%; bottom: 15%; right: 10%;"></div>
-                        <div style="position: absolute; width: 30%; height: 15%; background: #C0C0C0; border-radius: 50%; bottom: 10%; right: 5%;"></div>
-                    </div>
-                    <!-- For production, replace above div with: <img src="logo.png" alt="LKCircle Logo" style="width: 100%; height: 100%; object-fit: contain;"> -->
+                    <img src="logo.png" alt="LKCircle Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <span>LKCircle</span>
             </a>
-            <div class="nav-links">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <button class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-bg-pattern"></div>
+        <div class="hero-bg-pattern-2"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
@@ -747,7 +593,7 @@
                         id="emailInput"
                     />
                     <input type="hidden" name="_subject" value="New LKCircle Early Access Signup!">
-                    <input type="hidden" name="_next" value="https://lkcircle.com?success=true">
+                    <input type="hidden" name="_next" value="https://yourdomain.com?success=true">
                     <button type="submit" class="btn btn-primary">
                         Get Early Access
                     </button>
@@ -772,39 +618,6 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                         <span class="feature-text">Community Verified</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-visual">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <div class="app-preview">
-                            <div class="preview-logo" style="background: white; padding: 15px;">
-                                <!-- Logo representation for preview -->
-                                <div style="width: 100%; height: 100%; position: relative;">
-                                    <!-- Red figure -->
-                                    <div style="position: absolute; width: 30%; height: 30%; background: #E90C35; border-radius: 50%; top: 35%; left: 10%;"></div>
-                                    <div style="position: absolute; width: 25%; height: 40%; background: #E90C35; border-radius: 40% 60% 60% 40%; top: 15%; left: 20%; transform: rotate(-20deg);"></div>
-                                    
-                                    <!-- Dark blue figure -->
-                                    <div style="position: absolute; width: 30%; height: 30%; background: #3B4856; border-radius: 50%; top: 10%; right: 25%;"></div>
-                                    <div style="position: absolute; width: 20%; height: 35%; background: #3B4856; border-radius: 50%; top: 35%; right: 30%;"></div>
-                                    
-                                    <!-- Light gray figure -->
-                                    <div style="position: absolute; width: 25%; height: 25%; background: #C0C0C0; border-radius: 50%; bottom: 15%; right: 10%;"></div>
-                                    <div style="position: absolute; width: 30%; height: 15%; background: #C0C0C0; border-radius: 50%; bottom: 10%; right: 5%;"></div>
-                                </div>
-                                <!-- For production, replace above div with: <img src="logo.png" alt="LKCircle Logo" style="width: 100%; height: 100%; object-fit: contain;"> -->
-                            </div>
-                            <h3 style="font-size: 24px; margin-bottom: 16px; color: var(--text-primary);">Welcome to LKCircle</h3>
-                            <p class="preview-text">Your community app is loading...</p>
-                            <div style="display: flex; gap: 8px; justify-content: center; margin-top: 32px;">
-                                <div style="width: 8px; height: 8px; background: var(--primary); border-radius: 50%; animation: pulse 1.5s infinite;"></div>
-                                <div style="width: 8px; height: 8px; background: var(--primary); border-radius: 50%; animation: pulse 1.5s infinite 0.3s;"></div>
-                                <div style="width: 8px; height: 8px; background: var(--primary); border-radius: 50%; animation: pulse 1.5s infinite 0.6s;"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
